@@ -38,143 +38,42 @@
 
 // Q1 : Implement a function that returns the minimum element in a stack in constant time complexity.
 
-// class MyStack {
-//     constructor() {
-//         this.s = [];
-//         this.minEle;
+// const stack = [];
+// const minStack = [];
+
+// function myPush(num){
+//     stack.push(num);
+//     if (minStack.length === 0 || num <= minStack[minStack.length - 1]) {
+//         minStack.push(num);
 //     }
+// }
+// function getMin(){
+//     return minStack[minStack.length - 1];
+// }
 
-//     // Prints minimum element of MyStack
-//     getMin() {
-//         if (this.s.length == 0)
-//             console.log("Stack is empty");
-
-//         // variable minEle stores the minimum element
-//         // in the stack.
-//         else
-//             console.log("Minimum Element in the stack is: ", this.minEle);
-//     }
-
-//     // Prints top element of MyStack
-//     peek() {
-//         if (this.s.length == 0) {
-//             console.log("Stack is empty ");
-//             return;
-//         }
-//         let t = this.s[0]; // Top element.
-
-//         console.log("Top Most Element is: ");
-
-//         // If t < minEle means minEle stores
-//         // value of t.
-//         (t < this.minEle) ? console.log(this.minEle) : console.log(t);
-
-//     }
-
-//     // Remove the top element from MyStack
-//     pop() {
-//         if (this.s.length == 0) {
-//             console.log("Stack is empty ");
-//             return;
-//         }
-//         console.log("Top Most Element Removed: ");
-//         let t = this.s[0]; // Top element.
-//         this.s.shift();
-
-//         // Minimum will change as the minimum element
-//         // of the stack is being removed.
-//         if (t < this.minEle) {
-//             console.log(this.minEle);
-//             this.minEle = (2 * this.minEle) - t;
-//         }
-
-//         else
-//             console.log(t);
-//     }
-
-//     // Removes top element from MyStack
-//     push(x) {
-//         // Insert new number into the stack
-//         if (this.s.length == 0) {
-//             this.minEle = x;
-//             this.s.unshift(x);
-//             console.log("Number Inserted: ", x);
-//             return;
-//         }
-
-//         // If new number is less than minEle
-//         else if (x < this.minEle) {
-//             this.s.unshift(2 * x - this.minEle);
-//             this.minEle = x;
-//         }
-
-//         else
-//             this.s.unshift(x);
-
-//         console.log("Number Inserted: ", x);
-//     }
-
-// };
-
-// // Driver Code
-// let s = new MyStack;
-
-// // Function calls
-// s.push(3);
-// s.push(5);
-// s.getMin();
-// s.push(2);
-// s.push(1);
-// s.getMin();
-// s.pop();
-// s.getMin();
-// s.pop();
-
+// myPush(7);
+// myPush(9);
+// myPush(8);
+// myPush(6);
+// myPush(5);
+// console.log(getMin());
+  
 // Q2: Given a queue of integers, reverse the order of the elements in the queue.
 
-// function printQueue(queue)
-//     {
-//         while (queue.length != 0)
-//         {
-//             console.log(queue[0] + " ");
-//             queue.shift();
-//         }
-//     }
+// function reverseQueue(queue){
+//   const stack = [];
+//   while(queue.length > 0) {
+//     stack.push(queue.shift());
+//   }
+//   while(stack.length > 0) {
+//     queue.push(stack.pop());
+//   }
+//   return queue;
+// }
 
-//     // Recursive function
-//     // to reverse the queue
-//     function reverseQueue(q)
-//     {
-//         // Base case
-//         if (q.length == 0)
-//             return;
+// console.log(reverseQueue([1,2,3,4,5])); 
 
-//         // Dequeue current
-//         // item (from front)
-//         let data = q[0];
-//         q.shift();
-
-//         // Reverse remaining queue
-//         reverseQueue(q);
-
-//         // Enqueue current
-//         // item (to rear)
-//         q.push(data);
-//     }
-
-//     let queue = [];
-//     queue.push(56);
-//     queue.push(27);
-//     queue.push(30);
-//     queue.push(45);
-//     queue.push(85);
-//     queue.push(92);
-//     queue.push(58);
-//     queue.push(80);
-//     queue.push(90);
-//     queue.push(100);
-//     reverseQueue(queue);
-//     console.log(queue);
+// output will be [5 , 4 , 3 , 2 , 1]
 
 // Q3: Implement a Queue using 2 stacks s1 and s2.
 
