@@ -230,9 +230,9 @@ class Node {
 
 /* Function to reverse the linked list */
 function reverse(node) {
-var prev = null;
-var current = node;
-var next = null;
+let prev = null;
+let current = node;
+let next = null;
   while (current != null) {
       next = current.next;
       current.next = prev;
