@@ -259,7 +259,7 @@ function printList(node) {
   head.next.next.next = new Node(40);
 
   console.log("Given linked list");
-  printList(head);
+  console.log(head);
   head = reverse(head);
   console.log("Reversed linked list ");
-  printList(head);
+  console.log(head);
