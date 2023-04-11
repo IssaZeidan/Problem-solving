@@ -1,4 +1,4 @@
-// Q1:
+// Q1: Fibonacci Series:
 
 // function fib(n) {
 //   return n <= 1 ? n : fib(n - 1) + fib( n - 2);
@@ -10,7 +10,7 @@
 // console.log(fib(1));
 // console.log(fib(0));
 
-// Q2:
+// Q2: The sum of Array Elements:
 
 // let sum= function(array){
 //     return array.length === 0 ? 0 : array [0] + sum (array.slice(1))
@@ -18,7 +18,7 @@
 
 // console.log(sum([1,2,3,4,5]));
 
-// Q3:
+// Q3: Reverse a String:
 
 //  function reverse (str) {
 //  if (str === "")
